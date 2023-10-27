@@ -8,7 +8,7 @@ const About = () => {
     {/* why? */}
     <div className="bg-pink w-full h-48">
       <Container className="h-full flex justify-center items-center">
-        <div className="font-bold text-white text-5xl uppercase">About</div>
+        <div className="font-bold text-white text-5xl">ABOUT</div>
       </Container>
     </div>
       
