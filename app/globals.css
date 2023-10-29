@@ -4,7 +4,7 @@
 
 
 h1{
-  font-size: 1.875rem;
+  font-size: 2rem;
   color:#18181b;
 }
 
@@ -26,4 +26,8 @@ h4{
 h5{
   font-size: 1.5rem;
   color:#18181b;
+}
+
+div, p{
+  font-size: 1.1rem;
 }

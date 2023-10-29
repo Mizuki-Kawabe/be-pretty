@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 
-const outfit = Outfit({ subsets: ['latin'],weight:['200','300','400','700'] })
+const outfit = Outfit({ subsets: ['latin'],weight:['200','300','400','500','700'] })
 
 export const metadata: Metadata = {
   title: 'Be Pretty',
