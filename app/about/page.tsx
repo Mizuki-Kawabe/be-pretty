@@ -58,7 +58,7 @@ const About = () => {
             />
           </div>
           <h1 className="font-semibold mb-5 mt-6">What we offer</h1>
-          <div className="md:flex md:columns-2">
+          <div className="md:flex">
             <div className="mb-7">
             <h3 className="font-semibold text-center mb-2">・Premium Skincare Products</h3>
               <Image
