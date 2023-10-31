@@ -1,12 +1,9 @@
 import { Container} from "@mui/material";
-import Footer from "../components/footer/Footer";
-import NavBar from "../components/nav/NavBar";
 import Image from "next/image";
 
 const About = () => {
   return ( <>
-    <NavBar/>
-    {/* why? */}
+    
     <div className="bg-pink w-full h-52">
       <Container className="h-full flex justify-center items-center">
         <div className="font-bold text-mb text-4xl">ABOUT</div>
@@ -22,7 +19,7 @@ const About = () => {
               height={200}
               className="w-full rounded-xl lg:flex-1"
             />
-            <div className="md:flex-1 lg:my-auto lg:ml-6">
+            <div className="md:flex-1 lg:my-auto lg:ml-10">
               <h1 className="font-semibold mb-2 mt-6">Why Be Pretty?</h1>
               <div className="mb-8 text-gray">At Be Pretty, we understand that true beauty goes beyond cosmetics and fashion trends. For over a decade, we have been committed to redefining beauty standards and empowering individuals to embrace their natural beauty and boost their self-confidence. With a decade-long legacy of transforming lives, we are your trusted partner on your journey to self-discovery and self-expression.
               </div>
@@ -58,8 +55,8 @@ const About = () => {
             />
           </div>
           <h1 className="font-semibold mb-5 mt-6">What we offer</h1>
-          <div className="md:flex">
-            <div className="mb-7 md:w-1/2">
+          <div className="md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+            <div className="mb-7">
             <h3 className="font-semibold text-center mb-2">・Premium Skincare Products</h3>
               <Image
                 src="/offer-1.png"
@@ -70,7 +67,7 @@ const About = () => {
                 layout="responsive"
               />
             </div>
-            <div className="mb-7 md:w-1/2">
+            <div className="mb-7">
               <h3 className="font-semibold text-center mb-2">・Makeup Products</h3>
               <Image
                 src="/offer-2.png"
@@ -81,7 +78,7 @@ const About = () => {
                 layout="responsive"
               />
             </div>
-            <div className="mb-7 md:w-1/2">
+            <div className="mb-7">
             <h3 className="font-semibold text-center mb-2">・Beauty Consulting</h3>
               <Image
                 src="/offer-3.png"
@@ -94,9 +91,6 @@ const About = () => {
             </div>
           </div>
       </Container>
-    <Footer/>
-    
-
   </> );
 }
  

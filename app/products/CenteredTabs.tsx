@@ -14,10 +14,9 @@ export default function CenteredTabs() {
   return (
     <Box sx={{ width: '100%', bgcolor: 'background.paper' }}>
       <Tabs value={value} onChange={handleChange} centered 
+      TabIndicatorProps={{sx:{height:2}}}
       sx={{
         "& button":{color:"#18181b"},
-        // "& button:hover":{color:"#ea580b"},
-        // "& button:focus":{color:"#ea580b"},
         "& button.Mui-selected":{color:"#ea580b"},
         "& .MuiTabs-indicator":{backgroundColor:"#ea580b"}
       }}
