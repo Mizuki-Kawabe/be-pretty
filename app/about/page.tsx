@@ -59,7 +59,7 @@ const About = () => {
           </div>
           <h1 className="font-semibold mb-5 mt-6">What we offer</h1>
           <div className="md:flex">
-            <div className="mb-7 w-1/2">
+            <div className="mb-7 md:w-1/2">
             <h3 className="font-semibold text-center mb-2">・Premium Skincare Products</h3>
               <Image
                 src="/offer-1.png"
@@ -70,7 +70,7 @@ const About = () => {
                 layout="responsive"
               />
             </div>
-            <div className="mb-7 w-1/2">
+            <div className="mb-7 md:w-1/2">
               <h3 className="font-semibold text-center mb-2">・Makeup Products</h3>
               <Image
                 src="/offer-2.png"
@@ -81,7 +81,7 @@ const About = () => {
                 layout="responsive"
               />
             </div>
-            <div className="mb-7 w-1/2">
+            <div className="mb-7 md:w-1/2">
             <h3 className="font-semibold text-center mb-2">・Beauty Consulting</h3>
               <Image
                 src="/offer-3.png"
