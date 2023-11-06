@@ -1,8 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Outfit } from 'next/font/google'
+import { Merriweather } from 'next/font/google'
+import NavBar from './components/nav/NavBar'
+import Footer from './components/footer/Footer'
 
-const outfit = Outfit({ subsets: ['latin'],weight:['200','300','400','500','700'] })
+const merriweather = Merriweather({ subsets: ['latin'], weight:['300','400','700','900'] })
+
+
 
 export const metadata: Metadata = {
   title: 'Be Pretty',
@@ -16,11 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
-        <div className='flex flex-col min-h-screen bg-mw'>
-            <main className='flex-grow'>{children}</main>
-        </div>
-      </body>
+        <body className={merriweather.className}>
+          <NavBar/>
+          <div className='flex flex-col min-h-screen bg-mw'>
+              <main className='flex-grow'>{children}</main>
+          </div>
+          <Footer/>
+        </body>
     </html>
   )
 }
