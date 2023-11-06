@@ -57,7 +57,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            BE PRETTY
+            Be Pretty
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
