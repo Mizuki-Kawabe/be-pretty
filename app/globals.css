@@ -18,8 +18,15 @@ h3{
   color:#18181b;
 }
 
-
-
 div, p{
   font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #18181b !important;
 }

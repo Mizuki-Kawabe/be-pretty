@@ -1,5 +1,6 @@
 import { Container, Button } from "@mui/material"
 import Image from "next/image";
+import CardSlider from "./CardSlider";
 
 const HomeSection = () => {
   return ( <>
@@ -21,11 +22,10 @@ const HomeSection = () => {
             <Button variant="outlined" className="text-orange border-orange focus:border-orange hover:border-orange max-w-md">book appointment</Button>
             </div>
           </div>
-          <h1>Choose your beautician</h1>
-          
-      <div className="">
-      </div>
     </div>
+    <h1 className="m-auto">Choose your beautician</h1>
+    <CardSlider/>
+    <div className="w-10 h-10"></div>
   </Container>
   </> );
 }

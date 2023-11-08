@@ -1,9 +1,9 @@
-// "use client";
+"use client";
 import { beauticians } from "@/utils/beauticians";
 import Image from "next/image";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 
 interface Beautician {
@@ -19,16 +19,43 @@ const CardSlider:React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
-  };
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
 
   return ( 
-    <div className="w-3/4 m-auto">
+    <div className="w-full m-auto">
       <div className="mt-20">
-        {/* <Slider {...settings}> */}
+        <Slider {...settings}>
         {beauticians.map((d: Beautician) => (
-          <div key={d.id} className="bg-white h-[450px] text-mb rounded-xl">
+          <div key={d.id} className="bg-white h-[30rem] text-mb rounded-xl">
             <div className="h-56 rounded-t-xl bg-pink flex justify-center items-center w-full">
               <Image
               src={d.img}
@@ -45,7 +72,7 @@ const CardSlider:React.FC = () => {
             </div>
           </div>
         ))}
-        {/* </Slider> */}
+        </Slider>
       </div>
     </div>
    );
