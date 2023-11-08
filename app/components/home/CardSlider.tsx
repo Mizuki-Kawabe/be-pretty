@@ -51,8 +51,8 @@ const CardSlider:React.FC = () => {
   }
 
   return ( 
-    <div className="w-full m-auto">
-      <div className="mt-20">
+    <div className="w-full m-auto px-2">
+      <div className="mt-10">
         <Slider {...settings}>
         {beauticians.map((d: Beautician) => (
           <div key={d.id} className="bg-white h-[30rem] text-mb rounded-xl">
