@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Merriweather } from 'next/font/google'
 import NavBar from './components/nav/NavBar'
 import Footer from './components/footer/Footer'
+import { ThemeProvider } from '@mui/material'
+import theme from './theme'
 
 const merriweather = Merriweather({ subsets: ['latin'], weight:['300','400','700','900'] })
 
@@ -20,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <ThemeProvider theme={theme}>
         <body className={merriweather.className}>
           <NavBar/>
           <div className='flex flex-col min-h-screen bg-mw'>
@@ -27,6 +30,7 @@ export default function RootLayout({
           </div>
           <Footer/>
         </body>
+      </ThemeProvider>
     </html>
   )
 }
