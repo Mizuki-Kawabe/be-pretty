@@ -5,22 +5,22 @@
 
 h1{
   font-size: 2rem;
-  color:#18181b;
 }
 
 h2{
   font-size: 1.5rem;
-  color:#18181b;
+
 }
 
 h3{
   font-size: 1.0rem;
-  color:#18181b;
+
 }
 
 div, p{
   font-size: 1.1rem;
   font-weight: 100;
+  color:#393a37;
 }
 
 .slick-slide > div {

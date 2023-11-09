@@ -41,6 +41,9 @@ export const theme = createTheme({
       fontSize: 24,
       fontWeight: 700,
     },
+    button: {
+      textTransform: "none",
+    },
   },
   // パレットを設定
   palette: {
