@@ -9,12 +9,14 @@ module.exports = {
   theme: {
     colors: {
       tan: "#DDAF94",
+      deepTan: "#ab594b",
       green: "#a8b29e",
       lightGreen: "#f4fcf4",
       black: "#4F4846",
       white: "#ffffff",
       offWhite: "#f5f4f3",
       blue: "#9ba6c8",
+      yellow: "#e0b35a",
     },
     extend: {
       backgroundImage: {

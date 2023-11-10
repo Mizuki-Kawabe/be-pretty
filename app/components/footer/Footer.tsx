@@ -121,7 +121,7 @@ const Footer = () => {
             text-white
             text-bold
             bg-blue
-            rounded-lg
+            rounded-full
             transition-colors
             duration-150
             focus:shadow-outline
