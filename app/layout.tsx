@@ -6,6 +6,10 @@ import Footer from "./components/footer/Footer";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 
+if (process.env.NODE_ENV === "development") {
+  require("../mocks");
+}
+
 const merriweather = Merriweather({
   subsets: ["latin"],
   weight: ["300", "400", "700", "900"],

@@ -54,7 +54,7 @@ const CardSlider: React.FC = () => {
   return (
     <div className="w-full m-auto px-2">
       <div className="mt-10">
-        <Slider {...settings}>
+        <Slider {...settings} className="p-1">
           {beauticians.map((d: Beautician) => (
             <div
               key={d.id}

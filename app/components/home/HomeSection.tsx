@@ -1,6 +1,7 @@
 import { Container, Button } from "@mui/material";
 import Image from "next/image";
 import CardSlider from "./CardSlider";
+import HomeProducts from "./HomeProducts";
 
 const HomeSection = () => {
   return (
@@ -29,6 +30,10 @@ const HomeSection = () => {
           <CardSlider />
         </div>
         <div className="w-10 h-20"></div>
+        <div>
+          <h1 className="text-center mt-20">Top Picks</h1>
+          <HomeProducts />
+        </div>
       </Container>
     </>
   );

@@ -29,6 +29,10 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.12"
+    "@types/react-slick": "^0.23.12",
+    "msw": "^2.0.5"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
