@@ -18,6 +18,9 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   title: "Be Pretty",
   description: "E-commerce website",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

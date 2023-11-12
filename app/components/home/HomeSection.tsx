@@ -27,7 +27,7 @@ const HomeSection = () => {
         </div>
         <div>
           <h1 className="text-center mt-20">Choose your beautician</h1>
-          <CardSlider />
+          {/* <CardSlider /> */}
         </div>
         <div className="w-10 h-20"></div>
         <div>
