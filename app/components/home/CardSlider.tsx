@@ -2,6 +2,8 @@
 import { beauticians } from "@/utils/beauticians";
 import Image from "next/image";
 import { omitText } from "@/utils/omitText";
+import { FreeMode, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Beautician {
   id: number;
@@ -12,14 +14,19 @@ interface Beautician {
 
 const CardSlider: React.FC = () => {
   return (
-    <div className="mt-10 carousel w-full">
+    <div className="carousel carousel-end rounded-box w-full">
       {beauticians.map((d: Beautician) => (
-        <div className="carousel-item relative w-full" key={d.id}>
-          <div className="card w-96 bg-base-100 shadow-[5px_5px_0px_0px_#e6d8d7]">
+        <>
+          <div className="carousel-item bg-white card w-fit">
             <figure>
-              <Image src={d.img} alt="Shoes" width={400} height={400} />
+              <Image
+                src={d.img}
+                alt="beautician image"
+                width={400}
+                height={400}
+              />
             </figure>
-            <div className="card-body bg-offWhite">
+            <div className="card-body">
               <h2 className="card-title">
                 {d.name}
                 <div className="badge badge-secondary">NEW</div>
@@ -31,15 +38,7 @@ const CardSlider: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
+        </>
       ))}
     </div>
   );
