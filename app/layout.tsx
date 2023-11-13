@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
 import NavBar from "./components/nav/NavBar";
 import Footer from "./components/footer/Footer";
-import { ThemeProvider } from "@mui/material";
 import theme from "./theme";
 
 if (process.env.NODE_ENV === "development") {
@@ -30,15 +29,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ThemeProvider theme={theme}>
-        <body className={merriweather.className}>
-          <NavBar />
-          <div className="flex flex-col min-h-screen bg-offWhite">
-            <main className="flex-grow">{children}</main>
-          </div>
-          <Footer />
-        </body>
-      </ThemeProvider>
+      <body className={merriweather.className}>
+        <NavBar />
+        <div className="flex flex-col min-h-screen bg-offWhite">
+          <main className="flex-grow">{children}</main>
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

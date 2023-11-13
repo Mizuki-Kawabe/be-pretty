@@ -1,12 +1,11 @@
 import React from "react";
-import Container from "@mui/material/Container";
 
 const Footer = () => {
   return (
     <>
-      <footer aria-labelledby="footer-heading">
+      <footer aria-labelledby="footer-heading" className="bg-beige">
         {/* <h2 id="footer-heading" className="sr-only">Footer</h2> */}
-        <Container max-width="7xl">
+        <div className="container m-auto">
           <div className="py-12 mx-auto lg:py-16 ">
             <div className="md:grid md:grid-cols-5 md:gap-10">
               <div className="col-span-2 sm:mb-2>">
@@ -57,6 +56,7 @@ const Footer = () => {
                           type="text"
                           name="name"
                           className="
+            bg-white
             block
             w-full
             mt-1
@@ -77,6 +77,7 @@ const Footer = () => {
                           name="email"
                           type="email"
                           className="
+          bg-white
             block
             w-full
             mt-1
@@ -97,6 +98,7 @@ const Footer = () => {
                         <textarea
                           name="message"
                           className="
+            bg-white
             block
             w-full
             mt-1
@@ -138,7 +140,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </Container>
+        </div>
 
         <div className="md:mt-0 md:order-1 text-center text-lightGray bg-blue">
           <div className="text-sm py-6 text-lightGray text-white font-bold">

@@ -1,4 +1,3 @@
-import { Container, Button } from "@mui/material";
 import Image from "next/image";
 import CardSlider from "./CardSlider";
 import HomeProducts from "./HomeProducts";
@@ -6,7 +5,7 @@ import HomeProducts from "./HomeProducts";
 const HomeSection = () => {
   return (
     <>
-      <Container max-width="7xl">
+      <div className="container m-auto">
         <div className="text-center mt-8 grid gap-10 md:grid-cols-2 md:items-center md:text-left">
           <Image
             src="/home-1.png"
@@ -27,14 +26,14 @@ const HomeSection = () => {
         </div>
         <div>
           <h1 className="text-center mt-20">Choose your beautician</h1>
-          {/* <CardSlider /> */}
+          <CardSlider />
         </div>
         <div className="w-10 h-20"></div>
         <div>
           <h1 className="text-center mt-20">Top Picks</h1>
           <HomeProducts />
         </div>
-      </Container>
+      </div>
     </>
   );
 };

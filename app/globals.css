@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  color: #393a36;
+}
 
 h1{
   font-size: 2rem;
@@ -20,7 +23,6 @@ h3{
 div, p{
   font-size: 1.1rem;
   font-weight: 100;
-  color:#393a37;
 }
 
 .slick-slide > div {

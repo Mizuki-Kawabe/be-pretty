@@ -12,9 +12,10 @@ module.exports = {
       deepTan: "#ab594b",
       green: "#a8b29e",
       lightGreen: "#f4fcf4",
-      black: "#4F4846",
+      black: "#393a36",
       white: "#ffffff",
       offWhite: "#f5f4f3",
+      beige: "#ededeb",
       blue: "#9ba6c8",
       yellow: "#e0b35a",
     },
@@ -26,5 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
