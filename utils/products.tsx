@@ -11,14 +11,12 @@ export const products = [
       {
         color: "White",
         colorCode: "#FFFFFF",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622161445-iphone14-white.png?alt=media&token=fe2065e5-fdfe-4a6f-baa6-380b5fad90b8",
+        image: "/product-1.png",
       },
       {
         color: "Gray",
         colorCode: "#808080",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688622165836-iphone14-gray.png?alt=media&token=58f684db-998e-43eb-aa06-efe3d6ccfad4",
+        image: "/product-1.png",
       },
     ],
     reviews: [],
@@ -36,8 +34,7 @@ export const products = [
       {
         color: "Black",
         colorCode: "#000000",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688529886610-black-logitech-keyboard.jpg?alt=media&token=353aa276-1316-4e50-bc26-8e3828fe6cdd",
+        image: "/product-2.png",
       },
     ],
     reviews: [
@@ -76,20 +73,17 @@ export const products = [
       {
         color: "Black",
         colorCode: "#000000",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386605041-iphone12-black.jpg?alt=media&token=32abf316-ddf6-4870-9e1e-a7c884b750d6",
+        image: "/product-3.png",
       },
       {
         color: "Blue",
         colorCode: " #0000FF",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386607274-iphone12-blue.jpg?alt=media&token=e83a9b13-86b6-4518-9f1e-8ddef12ba9a2",
+        image: "/product-3.png",
       },
       {
         color: "Red",
         colorCode: "#FF0000",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386608652-iphone12-red.jpg?alt=media&token=603a9e86-5b8c-4f8d-b61c-c1c77e60e954",
+        image: "/product-3.png",
       },
     ],
     reviews: [
@@ -149,14 +143,13 @@ export const products = [
       {
         color: "Graphite",
         colorCode: " #383838",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688529379028-logitech-graphite-mouse.jpg?alt=media&token=f9dfba29-832f-4c58-88c6-a7a0ae6b22bf",
+        image: "/product-4.png",
       },
     ],
     reviews: [],
   },
   {
-    id: "649d775128b6744f0f497040",
+    id: "649d775128b6744f0t497040",
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
       'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
@@ -168,8 +161,7 @@ export const products = [
       {
         color: "Black",
         colorCode: "#000000",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041293609-watch-black.jpg?alt=media&token=270f918c-d9f5-41a2-ad32-45d5f3c66bf0",
+        image: "/product-5.png",
       },
       {
         color: "Silver",
@@ -181,7 +173,7 @@ export const products = [
     reviews: [],
   },
   {
-    id: "649d775128b6744f0f497040",
+    id: "649d775128b6744f0ee497040",
     name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
     description:
       'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
@@ -193,14 +185,219 @@ export const products = [
       {
         color: "Black",
         colorCode: "#000000",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041293609-watch-black.jpg?alt=media&token=270f918c-d9f5-41a2-ad32-45d5f3c66bf0",
+        image: "/product-6.png",
       },
       {
         color: "Silver",
         colorCode: "#C0C0C0",
-        image:
-          "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
+        image: "/product-6.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b1744f0f497040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-7.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-7.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b6744f4f497040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-8.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-8.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b6744f0f39g040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-9.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-9.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b674450f497040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-10.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-10.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b6734f0f497040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-11.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-11.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b674440f397040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-12.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-12.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775124b6744f0f497040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-13.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-13.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b6744f0f4447040",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-14.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-14.png",
+      },
+    ],
+    reviews: [],
+  },
+  {
+    id: "649d775128b6744f0f497050",
+    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    description:
+      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+    price: 50,
+    brand: "Nerunsa",
+    category: "Watch",
+    inStock: true,
+    images: [
+      {
+        color: "Black",
+        colorCode: "#000000",
+        image: "/product-15.png",
+      },
+      {
+        color: "Silver",
+        colorCode: "#C0C0C0",
+        image: "/product-15.png",
       },
     ],
     reviews: [],

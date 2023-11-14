@@ -21,7 +21,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         <div className="flex flex-col items-center w-full gap-1"></div>
         <div className="aspect-square overflow-hidden relative w-full">
           <Image
-            fill
+            width={300}
+            height={300}
             className="w-full h-full object-contain"
             src={data.images[0].image}
             alt={data.name}

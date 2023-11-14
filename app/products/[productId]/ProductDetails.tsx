@@ -18,7 +18,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-        <div>Image</div>
+        <div>{product.images.image}</div>
         <div className="flex flex-col gap-4 text-sm">
           <span className="bg-lightGray w-fit rounded-lg px-2 py-1 color-gray font-normal">
             {product.category}

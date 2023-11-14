@@ -1,11 +1,11 @@
 import React from "react";
+import Container from "../Container";
 
 const Footer = () => {
   return (
     <>
       <footer aria-labelledby="footer-heading" className="bg-beige">
-        {/* <h2 id="footer-heading" className="sr-only">Footer</h2> */}
-        <div className="container m-auto">
+        <Container>
           <div className="py-12 mx-auto lg:py-16 ">
             <div className="md:grid md:grid-cols-5 md:gap-10">
               <div className="col-span-2 sm:mb-2>">
@@ -123,7 +123,7 @@ const Footer = () => {
             text-white
             text-bold
             bg-blue
-            rounded-full
+            rounded-lg
             transition-colors
             duration-150
             focus:shadow-outline
@@ -133,27 +133,28 @@ const Footer = () => {
                           Contact Us
                         </button>
                       </div>
-                      <div></div>
                     </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </Container>
 
         <div className="md:mt-0 md:order-1 text-center text-lightGray bg-blue">
-          <div className="text-sm py-6 text-lightGray text-white font-bold">
-            Copyright © 2023
-            <a
-              href="#"
-              className="mx-2 text-white font-semibold"
-              rel="noopener noreferrer"
-            >
-              @Be Pretty
-            </a>
-            . Since 2023
-          </div>
+          <Container>
+            <div className="text-sm py-6 text-lightGray text-white font-bold">
+              Copyright © 2023
+              <a
+                href="#"
+                className="mx-2 text-white font-semibold"
+                rel="noopener noreferrer"
+              >
+                @Be Pretty
+              </a>
+              . Since 2023
+            </div>
+          </Container>
         </div>
       </footer>
     </>
