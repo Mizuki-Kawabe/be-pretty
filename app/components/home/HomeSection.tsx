@@ -19,7 +19,7 @@ const HomeSection = () => {
             style={{ borderRadius: "59% 41% 37% 63% / 52% 57% 43% 48%" }}
           />
           <div className="grid md:gap-10 sm:gap-5">
-            <h1 className="font-bold mb-4 text-left">
+            <h1 className="font-bold mb-4">
               <span className="text-transparent bg-gradient-to-r from-tan to-deepTan bg-clip-text mr-2">
                 Transform
               </span>

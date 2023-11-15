@@ -11,13 +11,12 @@ export const product = {
     {
       color: "Black",
       colorCode: "#000000",
-      image: "./public/product-1.png",
+      image: "/product-1.png",
     },
     {
       color: "Blue",
       colorCode: " #0000FF",
-      image:
-        "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1686386607274-iphone12-blue.jpg?alt=media&token=e83a9b13-86b6-4518-9f1e-8ddef12ba9a2",
+      image: "/product-1.png",
     },
     {
       color: "Red",
