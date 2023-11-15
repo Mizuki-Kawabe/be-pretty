@@ -14,7 +14,7 @@ const NavBar = () => {
           <Link href="/" className="btn btn-ghost text-xl text-deepTan">
             Be Pretty
           </Link>
-          <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan">
+          <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan ">
             Login
           </a>
         </div>

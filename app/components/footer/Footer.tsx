@@ -117,18 +117,7 @@ const Footer = () => {
                       <div className="mb-6">
                         <button
                           type="submit"
-                          className="
-            h-10
-            px-5
-            text-white
-            text-bold
-            bg-blue
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-          "
+                          className="btn text-white bg-green border-none rounded-full"
                         >
                           Contact Us
                         </button>

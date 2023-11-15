@@ -6,6 +6,7 @@ interface AboutProps {
   children: React.ReactNode;
 }
 
+//why do I use AboutProps here?
 const About: React.FC<AboutProps> = () => {
   return (
     <>

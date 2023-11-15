@@ -17,6 +17,7 @@ module.exports = {
       offWhite: "#f5f4f3",
       beige: "#ededeb",
       blue: "#9ba6c8",
+      purple: "#5a6999",
       yellow: "#e0b35a",
     },
   },
