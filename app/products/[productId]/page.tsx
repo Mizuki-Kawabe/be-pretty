@@ -1,3 +1,4 @@
+import Container from "@/app/components/Container";
 import { product } from "@/utils/product";
 import ProductDetails from "./ProductDetails";
 
@@ -9,9 +10,9 @@ const Product = ({ params }: { params: IPrams }) => {
   console.log("prams", params);
   return (
     <>
-      <div className="container m-auto">
+      <Container>
         <ProductDetails product={product} />
-      </div>
+      </Container>
     </>
   );
 };

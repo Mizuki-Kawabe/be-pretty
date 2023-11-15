@@ -9,7 +9,7 @@ const HomeSection = () => {
   return (
     <>
       <Container>
-        <div className="text-center mt-8 grid gap-10 md:grid-cols-2 md:items-center md:text-left">
+        <div className="text-center mt-8 grid gap-10 md:grid-cols-2 md:items-center md:text-left ">
           <Image
             src="/home-1.png"
             alt="home image"
@@ -32,28 +32,42 @@ const HomeSection = () => {
             </div>
           </div>
         </div>
-        <div>
-          <h1 className="text-center mt-20 mb-10 font-normal">
-            Choose your beautician
-          </h1>
-          <CardSlider />
-        </div>
-        <div className="mt-5 mr-5 flex">
-          <a
-            href=""
-            className="flex items-center font-bold text-lg text-black ml-auto"
-          >
-            Browse beauticians <FaArrowRight className="ml-1" />
-          </a>
-        </div>
-        <div className="w-10 h-20"></div>
-        <div>
-          <h1 className="text-center my-20 font-normal">Top Picks</h1>
-          <div>
+      </Container>
+
+      <div className="bg-gradient-to-r from-indigo-100 to-rose-100 py-10 mt-20 mb-5">
+        <h1 className="text-center mb-10 font-normal">
+          Choose your beautician
+        </h1>
+        <CardSlider />
+
+        <Container>
+          <div className="mt-5 mr-5 flex">
+            <a
+              href=""
+              className="flex items-center font-bold text-lg text-black ml-auto"
+            >
+              Browse more beauticians <FaArrowRight className="ml-1" />
+            </a>
+          </div>
+        </Container>
+      </div>
+
+      <Container>
+        <div className="mb-20">
+          <h1 className="text-center mt-20 font-normal">Top Picks</h1>
+          <div className="text-center text-2xl">
             Check out the latest cosmetics trends and consult with a counselor
             on how to choose and use them.
           </div>
           <HomeProducts />
+          <div className="mr-5 flex">
+            <a
+              href="/products"
+              className="flex items-center font-bold text-lg text-black ml-auto"
+            >
+              Browse more products <FaArrowRight className="ml-1" />
+            </a>
+          </div>
         </div>
       </Container>
       <div className="bg-[url('/about-us.jpg')] h-72 bg-center flex items-center justify-center">
