@@ -42,15 +42,21 @@ const NavBar = () => {
                   />
                 </svg>
               </div>
-              <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 bg-black">
                 <li>
-                  <Link href="/products">Products</Link>
+                  <Link href="/product" className="text-white">
+                    Products
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/appointment">Appointment</Link>
+                  <Link href="/appointment" className="text-white">
+                    Appointment
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/about">About Us</Link>
+                  <Link href="/about" className="text-white">
+                    About Us
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -61,7 +67,7 @@ const NavBar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <Link href="/products">Products</Link>
+                <Link href="/product">Products</Link>
               </li>
               <li>
                 <Link href="/appointment">Appointment</Link>

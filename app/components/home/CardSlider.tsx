@@ -18,9 +18,9 @@ interface Beautician {
 
 const CardSlider: React.FC = () => {
   return (
-    <div className="carousel carousel-end rounded-box w-full">
+    <div className="carousel carousel-end rounded-box w-full mx-3">
       {beauticians.map((d: Beautician) => (
-        <div className="carousel-item bg-white mr-2 card w-[320px]" key={d.id}>
+        <div className="carousel-item bg-white mr-4 card w-[320px]" key={d.id}>
           <figure>
             <Image
               src={d.img}
@@ -32,7 +32,7 @@ const CardSlider: React.FC = () => {
           <div className="card-body">
             <h2 className="card-title">{d.name}</h2>
             <p>{d.profile}</p>
-            <button className="btn rounded-full mb-2 bg-blue border-none flex flex-col h-[3.5rem]">
+            <button className="btn rounded-full mb-2 bg-blue border-none flex flex-col h-[5rem]">
               <div className="text-white font-normal">{d.program}</div>
               <div className="text-white font-normal">
                 {d.duration}mins ${d.price}
