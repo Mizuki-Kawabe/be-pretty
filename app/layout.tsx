@@ -4,6 +4,7 @@ import { Merriweather } from "next/font/google";
 import NavBar from "./components/nav/NavBar";
 import Footer from "./components/footer/Footer";
 import theme from "./theme";
+import CartProvider from "@/providers/cartProvider";
 
 if (process.env.NODE_ENV === "development") {
   require("../mocks");
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={merriweather.className}>
-        <NavBar />
-        <div className="flex flex-col min-h-screen bg-offWhite">
-          <main className="flex-grow">{children}</main>
-        </div>
-        <Footer />
+        <CartProvider>
+          <NavBar />
+          <div className="flex flex-col min-h-screen bg-offWhite">
+            <main className="flex-grow">{children}</main>
+          </div>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

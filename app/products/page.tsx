@@ -4,7 +4,12 @@ import * as React from "react";
 import CenteredTabs from "./CenteredTabs";
 import Container from "../components/Container";
 
-const Products = () => {
+interface IParams {
+  productId?: string;
+}
+
+const Products = ({ params }: { params: IParams }) => {
+  console.log("params", params);
   return (
     <>
       <div className="bg-tan w-full h-52 flex items-center">
