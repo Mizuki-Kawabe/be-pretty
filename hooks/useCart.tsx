@@ -1,4 +1,4 @@
-import { CartProductType } from "@/app/products/[productId]/ProductDetails";
+import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import { createContext, useCallback, useContext, useState } from "react";
 
 type CartContextType = {

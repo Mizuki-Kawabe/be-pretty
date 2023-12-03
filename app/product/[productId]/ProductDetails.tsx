@@ -4,7 +4,7 @@ import { useCart } from "@/hooks/useCart";
 import { Rating } from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
-import SetQuantity from "../setQuantity";
+import SetQuantity from "../../components/products/setQuantity";
 
 interface ProductDetailsProps {
   product: any;
