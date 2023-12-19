@@ -33,7 +33,9 @@ const CardSlider: React.FC = () => {
             <h2 className="card-title">{d.name}</h2>
             <p>{d.profile}</p>
             <button className="btn rounded-full mb-2 bg-blue border-none flex flex-col h-[5rem]">
-              <div className="text-white font-normal">{d.program}</div>
+              <div className="text-white font-normal leading-snug">
+                {d.program}
+              </div>
               <div className="text-white font-normal">
                 {d.duration}mins ${d.price}
               </div>
