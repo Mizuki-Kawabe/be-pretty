@@ -46,8 +46,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     price: product.price,
   });
 
-  console.log(cartProducts);
-
   useEffect(() => {
     setIsProductInCart(false);
     if (cartProducts) {
@@ -58,6 +56,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         setIsProductInCart(true);
       }
     }
+    console.log(cartProducts);
   }, [cartProducts]);
 
   const productRating =
