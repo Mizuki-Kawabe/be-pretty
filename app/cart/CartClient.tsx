@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
 import Button from "../components/Button";
 import Heading from "../product/[productId]/Heading";
+import ItemContent from "./itemContent";
 
 const CartClient = () => {
   const { cartProducts } = useCart();
@@ -38,12 +39,12 @@ const CartClient = () => {
       <div>
         {cartProducts &&
           cartProducts.map((item) => {
-            return <div key={item.id}>{item.name}</div>;
+            return <ItemContent key={item.id} item={item} />;
           })}
       </div>
-      <div className="border-t-[1.5px] border-slate-200 py-4 flex justify-between gap-4">
+      <div className="py-4 flex justify-between gap-4">
         <div className="w-[90px]">
-          <button className="btn btn-outline" onClick={() => {}}>
+          <button className="btn btn-outline text-slate-500" onClick={() => {}}>
             ClearCart
           </button>
         </div>
