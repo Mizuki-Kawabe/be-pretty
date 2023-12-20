@@ -81,11 +81,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-20 self-start">
         <Image
           width={300}
           height={300}
-          className="w-full h-full object-contain"
+          className="w-full object-contain"
           src={product.images[0].image}
           alt={product.name}
         />
@@ -125,10 +125,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               />
               <Horizontal />
               <div className="max-w-[300px]">
-                <Button
-                  label="Add To Cart"
+                <button
+                  className="btn w-full bg-tan text-white border-none"
                   onClick={() => handleAddProductToCart(cartProduct)}
-                ></Button>
+                >
+                  Add To Cart
+                </button>
               </div>
             </>
           )}

@@ -19,7 +19,7 @@ const NavBar = () => {
     // </div>
     <div className="bg-white">
       <Container>
-        <div className="navbar bg-white">
+        <div className="navbar bg-white p-0">
           <div className="navbar-start">
             <div className="dropdown">
               <div
