@@ -42,7 +42,7 @@ export const CartContextProvider = (props: Props) => {
         updatedCart = [product];
       }
 
-      toast.success("Product added to cart");
+      // toast.success("Product added to cart");
 
       localStorage.setItem("ECshopCartItem", JSON.stringify(updatedCart));
       return updatedCart;
