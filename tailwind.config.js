@@ -1,29 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 
-
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors:{
-      'mb':'#18181b',
-      'gray':'#3f3f46',
-      'pink':'#fce1dc',
-      'white':'#ffffff',
-      'mw':'#fafafa',
-      'lightGray':'#63636b',
-      'orange':'#ea580b',
-    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        tan: "#DDAF94",
+        deepTan: "#ab594b",
+        green: "#a8b29e",
+        lightGreen: "#f4fcf4",
+        black: "#393a36",
+        white: "#ffffff",
+        offWhite: "#f5f4f3",
+        beige: "#ededeb",
+        blue: "#9ba6c8",
+        purple: "#5a6999",
+        yellow: "#e0b35a",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("daisyui")],
+};

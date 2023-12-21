@@ -1,162 +1,92 @@
-"use client"; 
+"use client";
 
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import Link from 'next/link';
-// import Link from "react-router-dom"
+import CartCount from "@/app/cart/cartCount";
+import Link from "next/link";
+import Container from "../Container";
 
-
-const pages = ['products', 'appointment', 'about','contact'];
-const settings = ['profile', 'account', 'dashboard', 'logout'];
-
-function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
+const NavBar = () => {
   return (
-    <AppBar position="sticky" sx={{top:0, background:'#ffffff', boxShadow:'0 1px 1px rgba(0,0,0,.05), 0 1px 1px rgba(0,0,0,.05)', color:'#18181b'}}>
-      <Container max-width="7xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="./"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontWeight: 600,
-              letterSpacing: '.1rem',
-              color: '#18181b',
-              textDecoration: 'none',
-            }}
-          >
-            Be Pretty
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center"><Link href={`/${page}`}>{page}</Link></Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontWeight: 600,
-              letterSpacing: '.1rem',
-              color: 'inherit',
-              textDecoration: 'none'
-            }}
-          >
-            BE PRETTY
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },justifyContent:{md:'flex-end'},marginRight:{md:'1rem'} }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color:'black', display: 'block' }}
+    // <div className="bg-white">
+    //   <Container>
+    //     <div className="navbar flex justify-between">
+    //       <Link href="/" className="btn btn-ghost text-xl text-deepTan">
+    //         Be Pretty
+    //       </Link>
+    //       <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan ">
+    //         Login
+    //       </a>
+    //     </div>
+    //   </Container>
+    // </div>
+    <div className="bg-white">
+      <Container>
+        <div className="navbar bg-white p-0">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost lg:hidden"
               >
-              <Link href={`/${page}`}>{page}</Link>
-              </Button>
-            ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 bg-black">
+                <li>
+                  <Link href="/product" className="text-white">
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/appointment" className="text-white">
+                    Appointment
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-white">
+                    About Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <Link href="/" className="btn btn-ghost text-deepTan text-xl">
+              Be Pretty
+            </Link>
+          </div>
+          <div className="navbar-center hidden lg:flex">
+            <ul className="menu menu-horizontal px-1">
+              <li>
+                <Link href="/product">Products</Link>
+              </li>
+              <li>
+                <Link href="/appointment">Appointment</Link>
+              </li>
+              <li>
+                <Link href="/about">About Us</Link>
+              </li>
+            </ul>
+          </div>
+          <CartCount />
+          <div className="navbar-end">
+            <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan">
+              Button
+            </a>
+          </div>
+        </div>
       </Container>
-    </AppBar>
+    </div>
   );
-}
+};
 export default NavBar;
