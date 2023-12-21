@@ -115,7 +115,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           </div>
           <Horizontal />
           {isProductInCart ? (
-            <></>
+            <div className="max-w-[300px]">
+              <a href={`/cart`} className="btn w-full text-deepTan btn-outline">
+                View Cart
+              </a>
+            </div>
           ) : (
             <>
               <SetQuantity
