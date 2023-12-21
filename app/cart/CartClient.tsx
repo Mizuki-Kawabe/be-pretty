@@ -1,5 +1,6 @@
 "use client";
 import { useCart } from "@/hooks/useCart";
+import { formatPrice } from "@/utils/formatPrice";
 import { dividerClasses } from "@mui/material";
 import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
@@ -8,7 +9,7 @@ import Heading from "../product/[productId]/Heading";
 import ItemContent from "./itemContent";
 
 const CartClient = () => {
-  const { cartProducts, handleClearCart } = useCart();
+  const { cartProducts, handleClearCart, cartTotalAmount } = useCart();
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -57,7 +58,7 @@ const CartClient = () => {
         <div className="text-sm flex flex-col gap-1 items-start">
           <div className="flex justify-between w-full text-base font-semibold">
             <span>SubTotal</span>
-            <span>$1,000</span>
+            <span>{formatPrice(cartTotalAmount)}</span>
           </div>
           <p className="tet-slate-500">
             Taxes and shipping calculated at checkout

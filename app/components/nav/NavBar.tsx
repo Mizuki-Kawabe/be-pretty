@@ -1,5 +1,6 @@
 "use client";
 
+import CartCount from "@/app/cart/cartCount";
 import Link from "next/link";
 import Container from "../Container";
 
@@ -77,6 +78,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
+          <CartCount />
           <div className="navbar-end">
             <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan">
               Button
