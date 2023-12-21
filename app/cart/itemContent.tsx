@@ -6,12 +6,14 @@ import Link from "next/dist/client/link";
 import { CartProductType } from "../product/[productId]/ProductDetails";
 import Image from "next/image";
 import SetQuantity from "../components/products/setQuantity";
+import { useCart } from "@/hooks/useCart";
 
 interface ItemContentProps {
   item: CartProductType;
 }
 
 const ItemContent: React.FC<ItemContentProps> = ({ item }) => {
+  const { handleRemoveProductFromCart } = useCart();
   return (
     <div
       key={item.id}
@@ -35,7 +37,9 @@ grid grid-cols-5 text-xs md:text-sm gap-4 border-t-[1.5px] border-b-[1.5px] bord
           <div className="w-[70px] mt-1">
             <button
               className="link bg-offWhite text-slate-500"
-              onClick={() => {}}
+              onClick={() => {
+                handleRemoveProductFromCart(item);
+              }}
             >
               Remove
             </button>
