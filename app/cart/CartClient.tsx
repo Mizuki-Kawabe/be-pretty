@@ -5,7 +5,7 @@ import { dividerClasses } from "@mui/material";
 import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
 import Button from "../components/Button";
-import Heading from "../product/[productId]/Heading";
+import Heading from "../components/Heading";
 import ItemContent from "./itemContent";
 
 const CartClient = () => {
