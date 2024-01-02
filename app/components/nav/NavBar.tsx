@@ -1,8 +1,10 @@
 "use client";
 
-import CartCount from "@/app/cart/cartCount";
+import CartCount from "@/app/components/nav/cartCount";
 import Link from "next/link";
 import Container from "../Container";
+import UserMenu from "./UserMenu";
+import { MdHome } from "react-icons/md";
 
 const NavBar = () => {
   return (
@@ -43,7 +45,7 @@ const NavBar = () => {
                   />
                 </svg>
               </div>
-              <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 bg-black">
+              <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-black">
                 <li>
                   <Link href="/product" className="text-white">
                     Products
@@ -61,8 +63,14 @@ const NavBar = () => {
                 </li>
               </ul>
             </div>
-            <Link href="/" className="btn btn-ghost text-deepTan text-xl">
-              Be Pretty
+
+            <Link href="/" className="btn btn-ghost p-0">
+              <span className="sm:hidden text-3xl text-slate-700">
+                <MdHome />
+              </span>
+              <span className="hidden sm:inline text-xl text-deepTan">
+                Be Pretty
+              </span>
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -78,11 +86,10 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <CartCount />
-          <div className="navbar-end">
-            <a className="btn bg-deepTan border-none text-white hover:bg-tan active:bg-tan">
-              Button
-            </a>
+
+          <div className="navbar-end flex gap-6">
+            <CartCount />
+            <UserMenu />
           </div>
         </div>
       </Container>
