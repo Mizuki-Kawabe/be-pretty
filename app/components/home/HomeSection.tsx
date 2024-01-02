@@ -55,14 +55,14 @@ const HomeSection = () => {
       <Container>
         <div className="mb-20">
           <h1 className="text-center mt-20 font-normal">Top Picks</h1>
-          <div className="text-center text-2xl">
+          <div className="text-center">
             Check out the latest cosmetics trends and consult with a counselor
             on how to choose and use them.
           </div>
           <HomeProducts />
           <div className="mr-5 flex">
             <a
-              href="/products"
+              href="/product"
               className="flex items-center font-bold text-lg text-black ml-auto"
             >
               Browse more products <FaArrowRight className="ml-1" />

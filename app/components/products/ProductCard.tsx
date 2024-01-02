@@ -1,6 +1,6 @@
 "use client";
 import { formatPrice } from "@/utils/formatPrice";
-import { product } from "@/utils/product";
+
 import { truncateText } from "@/utils/truncateText";
 import { Rating } from "@mui/material";
 // import { Rating } from "@mui/material";

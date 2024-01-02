@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/app/components/Button";
 import { useCart } from "@/hooks/useCart";
+import { formatPrice } from "@/utils/formatPrice";
 import { Rating } from "@mui/material";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
@@ -94,7 +95,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
             {product.category}
           </span>
           <h2 className="text-3xl font-medium text-md">{product.name}</h2>
-          <div>{product.price}</div>
+          <div>{formatPrice(product.price)}</div>
           <div className="flex items-center gap-2">
             <Rating value={productRating} readOnly />
             <div className="font-thin">{product.reviews.length} reviews</div>
