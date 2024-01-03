@@ -4,21 +4,33 @@ import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import BackDrop from "./BackDrop";
 import CartCount from "./CartCount";
-import { getCurrentUser } from "@/actions/getCurrentUser";
+
+import { User } from "@prisma/client";
+import { SafeUser } from "@/types";
+import getCurrentUser from "@/actions/getCurrentUser";
 
 // FIXME: ここでasyncを使うとエラーが出る。
-const NavBar = async () => {
+const NavBar = () => {
   // FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
-  const currentUser = await getCurrentUser();
-  console.log("USER", currentUser);
 
-  // const [isOpen, setIsOpen] = useState(false);
-  // const toggleOpen = useCallback(() => {
-  //   setIsOpen((prev) => !prev);
-  // }, []);
+  const [currentUser, setCurrentUser] = useState<SafeUser | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // const result = await getCurrentUser();
+        // console.log(result);
+        // setCurrentUser(result);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="bg-white">

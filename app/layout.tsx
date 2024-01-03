@@ -6,6 +6,7 @@ import theme from "./theme";
 import CartProvider from "@/providers/cartProvider";
 import { Toaster } from "react-hot-toast";
 import NavBar from "./components/nav/NavBar";
+import getCurrentUser from "@/actions/getCurrentUser";
 
 if (process.env.NODE_ENV === "development") {
   require("../mocks");
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
   title: "Be Pretty",
   description: "E-commerce website",
 };
+
+const currentUser = getCurrentUser();
+console.log(currentUser);
 
 export default async function RootLayout({
   children,
@@ -39,7 +43,7 @@ export default async function RootLayout({
         />
         <CartProvider>
           {/* FIXME: asyncを使っているNavbarの部分でエラーが出る。 */}
-          {/* @ts-expect-error Server Component */}
+
           <NavBar />
           <div className="flex flex-col min-h-screen bg-offWhite">
             <main className="flex-grow">{children}</main>
