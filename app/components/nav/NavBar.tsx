@@ -13,6 +13,10 @@ const NavBar = async () => {
   const currentUser = await getCurrentUser();
   console.log("USER", currentUser);
 
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleOpen = useCallback(() => {
+  //   setIsOpen((prev) => !prev);
+  // }, []);
   return (
     <>
       <div className="bg-white">
@@ -84,7 +88,7 @@ const NavBar = async () => {
 
             <div className="navbar-end flex gap-6">
               <CartCount />
-              <UserMenu />
+              <UserMenu currentUser={currentUser} />
             </div>
           </div>
         </Container>
