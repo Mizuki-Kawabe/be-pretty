@@ -34,10 +34,9 @@ model User {
   image          String?
   hashedPassword String?
   createdAt      DateTime  @default(now())
-
-  updateAt DateTime  @updatedAt
-  role     Role      @default(USER)
-  accounts Account[]
+  updateAt       DateTime  @updatedAt
+  role           Role      @default(USER)
+  accounts       Account[]
 }
 
 enum Role {

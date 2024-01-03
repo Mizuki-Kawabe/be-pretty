@@ -7,13 +7,18 @@ import { MdHome } from "react-icons/md";
 import { useCallback, useState } from "react";
 import BackDrop from "./BackDrop";
 import CartCount from "./CartCount";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+// FIXME: ここでasyncを使うとエラーが出る。
+const NavBar = async () => {
+  // FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
+  const currentUser = await getCurrentUser();
+  console.log("USER", currentUser);
 
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleOpen = useCallback(() => {
+  //   setIsOpen((prev) => !prev);
+  // }, []);
   return (
     <>
       <div className="bg-white">
@@ -25,7 +30,6 @@ const NavBar = () => {
                   tabIndex={0}
                   role="button"
                   className="btn btn-ghost lg:hidden"
-                  onClick={toggleOpen}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,12 +90,11 @@ const NavBar = () => {
 
             <div className="navbar-end flex gap-6">
               <CartCount />
-              <UserMenu />
+              <UserMenu currentUser={currentUser} />
             </div>
           </div>
         </Container>
       </div>
-      {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
     </>
   );
 };
