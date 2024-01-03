@@ -1,12 +1,12 @@
 "use client";
 
-import CartCount from "@/app/components/nav/cartCount";
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
 import { useCallback, useState } from "react";
 import BackDrop from "./BackDrop";
+import CartCount from "./CartCount";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
