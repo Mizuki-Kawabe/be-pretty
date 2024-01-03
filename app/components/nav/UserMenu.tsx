@@ -29,10 +29,10 @@ const UserMenu = () => {
           className="dropdown-content  menu p-2 shadow bg-black rounded-box w-52 text-white z-30"
         >
           <li>
-            <a>Your Orders</a>
+            <a href="/orders">Your Orders</a>
           </li>
           <li>
-            <a>Your Bookings</a>
+            <a href="/bookings">Your Bookings</a>
           </li>
           <li>
             <a>Admin Dashboard</a>
@@ -46,12 +46,12 @@ const UserMenu = () => {
               LogOut
             </a>
           </li>
-          {/* <li>
-          <a href="/login">Login</a>
-        </li>
-        <li>
-          <a href="/register">Register</a>
-        </li> */}
+          <li>
+            <a href="/login">Login</a>
+          </li>
+          <li>
+            <a href="/register">Register</a>
+          </li>
         </ul>
       </div>
       {isOpen ? <BackDrop onClick={toggleOpen} /> : null}

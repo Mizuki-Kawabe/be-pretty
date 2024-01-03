@@ -1,18 +1,21 @@
 "use client";
 
-import CartCount from "@/app/components/nav/cartCount";
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
 import { useCallback, useState } from "react";
 import BackDrop from "./BackDrop";
+import CartCount from "./CartCount";
 
-const NavBar = () => {
+const NavBar = async () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
     setIsOpen((prev) => !prev);
   }, []);
+
+  const currentUser = await getCurrentUser();
+  console.log("USER", currentUser);
 
   return (
     <>
