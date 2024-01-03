@@ -1,4 +1,4 @@
-"user client";
+"use client";
 import { signOut } from "next-auth/react";
 
 import { useCallback, useState } from "react";

@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
@@ -7,13 +5,11 @@ import { MdHome } from "react-icons/md";
 import { useCallback, useState } from "react";
 import BackDrop from "./BackDrop";
 import CartCount from "./CartCount";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
+// FIXME: ここでasyncを使うとエラーが出る。
 const NavBar = async () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
-
+  // FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
   const currentUser = await getCurrentUser();
   console.log("USER", currentUser);
 
@@ -28,7 +24,6 @@ const NavBar = async () => {
                   tabIndex={0}
                   role="button"
                   className="btn btn-ghost lg:hidden"
-                  onClick={toggleOpen}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +89,6 @@ const NavBar = async () => {
           </div>
         </Container>
       </div>
-      {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
     </>
   );
 };

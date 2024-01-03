@@ -38,6 +38,8 @@ export default async function RootLayout({
           }}
         />
         <CartProvider>
+          {/* FIXME: asyncを使っているNavbarの部分でエラーが出る。 */}
+          {/* @ts-expect-error Server Component */}
           <NavBar />
           <div className="flex flex-col min-h-screen bg-offWhite">
             <main className="flex-grow">{children}</main>
