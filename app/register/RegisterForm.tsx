@@ -58,7 +58,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Heading title="Sign up" />
+      <Heading title="Register" />
       <button className="btn btn-outline text-black w-full" onClick={() => {}}>
         <FaGoogle />
         Sign up with Google
@@ -94,10 +94,10 @@ const RegisterForm = () => {
         className="btn bg-deepTan border-none text-white"
         onClick={handleSubmit(onSubmit)}
       >
-        {isLoading ? "Loading" : "Sign Up"}
+        {isLoading ? "Loading" : "Register"}
       </button>
       <p className="text-sm">
-        Already habe an account?
+        Already have an account?
         <Link href="/login" className="underline ml-1">
           Log in
         </Link>

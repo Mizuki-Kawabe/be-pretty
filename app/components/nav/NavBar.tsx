@@ -1,19 +1,19 @@
-"use client";
-
-import CartCount from "@/app/components/nav/cartCount";
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
 import { useCallback, useState } from "react";
 import BackDrop from "./BackDrop";
+import CartCount from "./CartCount";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+const NavBar = async () => {
+  const currentUser = await getCurrentUser();
 
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleOpen = useCallback(() => {
+  //   setIsOpen((prev) => !prev);
+  // }, []);
   return (
     <>
       <div className="bg-white">
@@ -25,7 +25,7 @@ const NavBar = () => {
                   tabIndex={0}
                   role="button"
                   className="btn btn-ghost lg:hidden"
-                  onClick={toggleOpen}
+                  // onClick={toggleOpen}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,12 +86,12 @@ const NavBar = () => {
 
             <div className="navbar-end flex gap-6">
               <CartCount />
-              <UserMenu />
+              <UserMenu currentUser={currentUser} />
             </div>
           </div>
         </Container>
       </div>
-      {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
+      {/* {isOpen ? <BackDrop onClick={toggleOpen} /> : null} */}
     </>
   );
 };

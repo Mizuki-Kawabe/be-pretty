@@ -1,11 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Merriweather } from "next/font/google";
-import NavBar from "./components/nav/NavBar";
 import Footer from "./components/footer/Footer";
 import theme from "./theme";
 import CartProvider from "@/providers/cartProvider";
 import { Toaster } from "react-hot-toast";
+import NavBar from "./components/nav/NavBar";
 
 if (process.env.NODE_ENV === "development") {
   require("../mocks");
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "E-commerce website",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
