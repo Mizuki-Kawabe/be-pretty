@@ -12,10 +12,10 @@ interface UserMenuProps {
   currentUser: SafeUser | null;
 }
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+  // const [isOpen, setIsOpen] = useState(false);
+  // const toggleOpen = useCallback(() => {
+  //   setIsOpen((prev) => !prev);
+  // }, []);
 
   return (
     <>
@@ -24,7 +24,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           tabIndex={0}
           role="button"
           className="text-slate-700 z-30"
-          onClick={toggleOpen}
+          // onClick={toggleOpen}
         >
           <FaUser className="z-30" />
         </div>
@@ -64,19 +64,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             <li>
               <a href="/register">Register</a>
             </li>
-            <li>
-              <a
-                onClick={() => {
-                  signOut();
-                }}
-              >
-                LogOut
-              </a>
-            </li>
           </ul>
         )}
       </div>
-      {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
     </>
   );
 };
