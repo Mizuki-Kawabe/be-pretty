@@ -1,10 +1,8 @@
-"use client";
-
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
-import { useCallback, useEffect, useState } from "react";
+
 import BackDrop from "./BackDrop";
 import CartCount from "./CartCount";
 
@@ -13,23 +11,13 @@ import { SafeUser } from "@/types";
 import getCurrentUser from "@/actions/getCurrentUser";
 
 // FIXME: ここでasyncを使うとエラーが出る。
-const NavBar = () => {
-  // FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
 
-  const [currentUser, setCurrentUser] = useState<SafeUser | null>(null);
+// FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // const result = await getCurrentUser();
-        // console.log(result);
-        // setCurrentUser(result);
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
-    };
-    fetchData();
-  }, []);
+// const [currentUser, setCurrentUser] = useState<SafeUser | null>(null);
+
+const NavBar = async () => {
+  const currentUser = await getCurrentUser();
 
   return (
     <>
@@ -102,6 +90,7 @@ const NavBar = () => {
 
             <div className="navbar-end flex gap-6">
               <CartCount />
+
               <UserMenu currentUser={currentUser} />
             </div>
           </div>

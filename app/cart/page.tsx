@@ -12,4 +12,3 @@ const Card = () => {
 };
 
 export default Card;
-<div>Cart</div>;

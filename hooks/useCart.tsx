@@ -1,3 +1,5 @@
+"use client";
+
 import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import {
   createContext,

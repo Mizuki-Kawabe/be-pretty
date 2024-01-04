@@ -1,3 +1,5 @@
+"use client";
+
 import { signOut } from "next-auth/react";
 import { useCallback, useState } from "react";
 import Avatar from "../Avatar";
@@ -32,13 +34,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             className="dropdown-content  menu p-2 shadow bg-black rounded-box w-52 text-white z-30"
           >
             <li>
-              <a>Your Orders</a>
+              <a href="/orders">Your Orders</a>
             </li>
             <li>
-              <a>Your Bookings</a>
+              <a href="/bookings">Your Bookings</a>
             </li>
             <li>
-              <a>Admin Dashboard</a>
+              <a href="/admin">Admin Dashboard</a>
             </li>
             <hr />
             <li>
@@ -61,6 +63,15 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             </li>
             <li>
               <a href="/register">Register</a>
+            </li>
+            <li>
+              <a
+                onClick={() => {
+                  signOut();
+                }}
+              >
+                LogOut
+              </a>
             </li>
           </ul>
         )}

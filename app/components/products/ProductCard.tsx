@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
             alt={data.name}
           />
         </div>
-        <div className="mt-4">{truncateText(data.name)}</div>
+        <div className="mt-4 break-all">{truncateText(data.name)}</div>
         <div className="mt-2 text-gray">{data.reviews.length} Reviews</div>
         <Rating value={productRating} readOnly />
         <div className="mt-2 font-semibold">{formatPrice(data.price)}</div>

@@ -18,9 +18,9 @@ interface Beautician {
 
 const CardSlider: React.FC = () => {
   return (
-    <div className="carousel carousel-end rounded-box w-full">
+    <div className="carousel carousel-end rounded-box w-full px-5">
       {beauticians.map((d: Beautician) => (
-        <div className="carousel-item bg-white card w-[300px]" key={d.id}>
+        <div className="carousel-item bg-white card w-[300px] mr-5" key={d.id}>
           <figure>
             <Image
               src={d.img}
