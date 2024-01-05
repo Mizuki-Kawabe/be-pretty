@@ -3,13 +3,18 @@ import { useCart } from "@/hooks/useCart";
 import { formatPrice } from "@/utils/formatPrice";
 import { dividerClasses } from "@mui/material";
 import Link from "next/link";
+import { FormEvent, useRef, useState } from "react";
 import { MdArrowBack } from "react-icons/md";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
 import ItemContent from "./itemContent";
+import Image from "next/image";
 
 const CartClient = () => {
+  const [isPaymentProcessing, setIsPaymentProcessing] = useState(false);
+  const [isPaymentDone, setIsPaymentDone] = useState(false);
   const { cartProducts, handleClearCart, cartTotalAmount } = useCart();
+  const paymentRef = useRef<HTMLDialogElement | null>(null);
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -27,6 +32,22 @@ const CartClient = () => {
       </div>
     );
   }
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPaymentProcessing(true);
+
+    setTimeout(() => {
+      setIsPaymentProcessing(false);
+      setIsPaymentDone(true);
+
+      setTimeout(() => {
+        paymentRef.current?.close();
+        setIsPaymentDone(false);
+        handleClearCart();
+      }, 3000);
+    }, 3000);
+  };
 
   return (
     <div>
@@ -67,10 +88,13 @@ const CartClient = () => {
             <div className="flex flex-col w-full">
               <button
                 className="btn bg-tan text-white border-none w-44 m-auto"
-                onClick={() => {}}
+                onClick={() => {
+                  paymentRef.current?.showModal();
+                }}
               >
                 Check Out
               </button>
+
               <Link
                 href={"/"}
                 className="text-slate-500 flex items-center gap-1 mt-2"
@@ -118,11 +142,14 @@ const CartClient = () => {
             </p>
 
             <button
-              className="btn bg-tan text-white border-none"
-              onClick={() => {}}
+              className="btn bg-tan text-white border-none w-44 m-auto"
+              onClick={() => {
+                paymentRef.current?.showModal();
+              }}
             >
               Check Out
             </button>
+
             <Link
               href={"/"}
               className="text-slate-500 flex items-center gap-1 mt-2"
@@ -133,6 +160,77 @@ const CartClient = () => {
           </div>
         </div>
       </div>
+      <dialog
+        ref={paymentRef}
+        id="my_modal_3"
+        className="modal modal-bottom sm:modal-middle"
+      >
+        {isPaymentProcessing ? (
+          <div className="modal-box bg-white">
+            <h3 className="font-bold text-lg text-center mb-2">
+              Processing Payment...
+            </h3>
+            <Image
+              src="/payment.gif"
+              alt="payment image"
+              width={300}
+              height={300}
+              className="m-auto"
+            />
+          </div>
+        ) : isPaymentDone ? (
+          <div className="modal-box bg-white">
+            <h3 className="font-bold text-lg text-center mb-2">
+              Thank you for your purchace!
+            </h3>
+          </div>
+        ) : (
+          <div className="modal-box bg-white">
+            <form method="dialog">
+              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                ✕
+              </button>
+            </form>
+            <h3 className="font-bold text-lg text-center">
+              Enter Card Details
+            </h3>
+            <div className="text-center">
+              <input
+                type="text"
+                name="fullName"
+                className="w-full mt-6 border border-gray-700 p-4 rounded-sm bg-white"
+                placeholder="Enter your full name"
+                aria-label="Full name"
+                required
+              ></input>
+              <input
+                type="number"
+                name="card"
+                className="w-full mt-6 border border-gray-700 p-4 rounded-sm  bg-white"
+                placeholder="Enter your card "
+                aria-label="Email address"
+                required
+              ></input>
+              <input
+                type="number"
+                name="input-cvv"
+                className="w-full mt-6 border border-gray-700 p-4 rounded-sm  bg-white"
+                placeholder="Enter your cvv"
+                aria-label="cvv"
+                required
+              ></input>
+              <form onSubmit={handleSubmit}>
+                <button
+                  type="submit"
+                  className="btn block bg-deepTan border-none text-white m-auto mt-5 w-full"
+                >
+                  Pay
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+      </dialog>
     </div>
   );
 };

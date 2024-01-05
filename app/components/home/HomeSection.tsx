@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../Container";
-import CardSlider from "./CardSlider";
+import HomeBeautitians from "./HomeBeautitians";
 import HomeProducts from "./HomeProducts";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -38,7 +38,7 @@ const HomeSection = () => {
         <h1 className="text-center mb-10 font-normal">
           Choose your beautician
         </h1>
-        <CardSlider />
+        <HomeBeautitians />
 
         <Container>
           <div className="mt-5 mr-5 flex">
