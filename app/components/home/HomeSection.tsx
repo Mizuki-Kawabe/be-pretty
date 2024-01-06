@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "../Container";
-import HomeBeautitians from "./HomeBeautitians";
+import HomeBeauticians from "./HomeBeauticians";
 import HomeProducts from "./HomeProducts";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -38,16 +38,16 @@ const HomeSection = () => {
         <h1 className="text-center mb-10 font-normal">
           Choose your beautician
         </h1>
-        <HomeBeautitians />
+        <HomeBeauticians />
 
         <Container>
           <div className="mt-5 mr-5 flex">
-            <a
-              href=""
+            <Link
+              href="/beautician"
               className="flex items-center font-bold text-lg text-black ml-auto"
             >
               Browse more beauticians <FaArrowRight className="ml-1" />
-            </a>
+            </Link>
           </div>
         </Container>
       </div>

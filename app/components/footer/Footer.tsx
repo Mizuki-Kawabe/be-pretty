@@ -27,11 +27,11 @@ const Footer = () => {
                   className="mt-4 space-y-4 text-black font-extralight text-base"
                 >
                   <li>
-                    <a href="/products">Products</a>
+                    <a href="/product">Products</a>
                   </li>
 
                   <li>
-                    <a href="/appointment"> Appointment </a>
+                    <a href="/beautician">Beauticians</a>
                   </li>
 
                   <li>

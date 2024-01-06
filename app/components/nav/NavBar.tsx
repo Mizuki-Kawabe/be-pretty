@@ -53,8 +53,8 @@ const NavBar = async () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/appointment" className="text-white">
-                      Appointment
+                    <Link href="/beautician" className="text-white">
+                      Beauticians
                     </Link>
                   </li>
                   <li>
@@ -80,7 +80,7 @@ const NavBar = async () => {
                   <Link href="/product">Products</Link>
                 </li>
                 <li>
-                  <Link href="/appointment">Appointment</Link>
+                  <Link href="/beautician">Beauticians</Link>
                 </li>
                 <li>
                   <Link href="/about">About Us</Link>

@@ -1,19 +1,24 @@
+import Container from "@/app/components/Container";
 import { beautician } from "@/utils/beautician";
-import BeauticianDetails from "./BeauticianDetails";
+import { beauticians } from "@/utils/beauticians";
 
 interface IPrams {
-  productId?: string;
+  beauticianId?: number;
 }
 
-const Product = ({ params }: { params: IPrams }) => {
+const Beautician = ({ params }: { params: IPrams }) => {
   console.log("prams", params);
+
+  const beautician = beauticians.find(
+    (item) => item.id === params.beauticianId
+  );
   return (
     <>
-      <div className="container m-auto">
-        <BeauticianDetails beautician={beautician} />
-      </div>
+      <Container>
+        <></>
+      </Container>
     </>
   );
 };
 
-export default Product;
+export default Beautician;
