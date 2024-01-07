@@ -1,7 +1,6 @@
 import { beauticians } from "@/utils/beauticians";
 import BeauticianCard from "../components/beauticians/BeauticianCard";
 import Container from "../components/Container";
-import BeauticianDetails from "./[beauticianId]/BeauticianDetails";
 
 const beautician = () => {
   return (

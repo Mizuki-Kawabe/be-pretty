@@ -1,9 +1,9 @@
 import Container from "@/app/components/Container";
-import { beautician } from "@/utils/beautician";
 import { beauticians } from "@/utils/beauticians";
+import BeauticianDetails from "./BeauticianDetails";
 
 interface IPrams {
-  beauticianId?: number;
+  beauticianId?: string;
 }
 
 const Beautician = ({ params }: { params: IPrams }) => {
@@ -12,12 +12,11 @@ const Beautician = ({ params }: { params: IPrams }) => {
   const beautician = beauticians.find(
     (item) => item.id === params.beauticianId
   );
+
   return (
-    <>
-      <Container>
-        <></>
-      </Container>
-    </>
+    <Container>
+      <BeauticianDetails beautician={beautician} />
+    </Container>
   );
 };
 

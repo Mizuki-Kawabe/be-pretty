@@ -38,6 +38,10 @@ div, p{
   color: #18181b !important;
 }
 
+.custom-width {
+  width: calc(50% - 25px);
+}
+
 @layer base {
   input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {

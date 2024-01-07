@@ -4,15 +4,19 @@ import { beauticians } from "@/utils/beauticians";
 import BeauticianCard from "../beauticians/BeauticianCard";
 import { useRouter } from "next/navigation";
 
+interface MenuItem {
+  name: string;
+  detail: string;
+  price: number;
+  duration: number;
+}
+
 interface Beautician {
-  id: number;
+  id: string;
   name: string;
   img: string;
   profile: string;
-  program: string;
-  price: number;
-  duration: number;
-  programDetail: string;
+  menu: MenuItem[];
 }
 
 const CardSlider: React.FC = () => {

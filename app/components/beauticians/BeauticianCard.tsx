@@ -27,11 +27,11 @@ const BeauticianCard: React.FC<BeauticianCardProps> = ({ data }) => {
         <p className="line-clamp-3">{data.profile}</p>
         <button className="rounded-full bg-blue border-none flex flex-col py-2">
           <div className="text-white font-normal leading-snug m-auto line-clamp-1 max-w-[200px]">
-            {data.program}
+            {data.menu[0].name}
           </div>
           <div className="text-white flex flex-col gap-1 w-full">
             <div className="text-white m-auto">
-              {data.duration}mins/${data.price}
+              {data.menu[0].duration}mins/${data.menu[0].price}
             </div>
           </div>
         </button>
