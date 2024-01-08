@@ -13,7 +13,7 @@ const beautician = () => {
         </Container>
       </div>
       <Container>
-        <div className="my-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-y-10 justify-center justify-items-center">
+        <div className="my-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-x-5 gap-y-7 justify-center justify-items-center">
           {beauticians.map((beautician: any) => {
             return <BeauticianCard key={beautician.id} data={beautician} />;
           })}

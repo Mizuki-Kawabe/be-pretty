@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "beautician-bg": "url('/public/beautician.png')",
+      },
       colors: {
         tan: "#DDAF94",
         deepTan: "#ab594b",
@@ -21,6 +24,8 @@ module.exports = {
         purple: "#5a6999",
         yellow: "#e0b35a",
         lightPink: "#f4ecec",
+        pinkWhite: "#f8f8f8",
+        beigePink: "#f4eeed",
       },
     },
   },

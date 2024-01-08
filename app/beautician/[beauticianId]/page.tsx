@@ -13,11 +13,7 @@ const Beautician = ({ params }: { params: IPrams }) => {
     (item) => item.id === params.beauticianId
   );
 
-  return (
-    <Container>
-      <BeauticianDetails beautician={beautician} />
-    </Container>
-  );
+  return <BeauticianDetails beautician={beautician} />;
 };
 
 export default Beautician;

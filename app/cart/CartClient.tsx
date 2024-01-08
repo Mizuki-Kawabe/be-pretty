@@ -82,9 +82,7 @@ const CartClient = () => {
               <span>SubTotal</span>
               <span>{formatPrice(cartTotalAmount)}</span>
             </div>
-            <p className="tet-slate-500">
-              Taxes and shipping calculated at checkout
-            </p>
+
             <div className="flex flex-col w-full">
               <button
                 className="btn bg-tan text-white border-none w-44 m-auto"
@@ -133,16 +131,13 @@ const CartClient = () => {
           </div>
 
           <div className="text-sm flex flex-col gap-1 items-start">
-            <div className="flex justify-between w-full text-base font-semibold">
+            <div className="flex justify-between w-full text-base font-semibold mb-3">
               <span>SubTotal</span>
               <span>{formatPrice(cartTotalAmount)}</span>
             </div>
-            <p className="tet-slate-500">
-              Taxes and shipping calculated at checkout
-            </p>
 
             <button
-              className="btn bg-tan text-white border-none w-44 m-auto"
+              className="btn bg-tan text-white border-none w-44 m-auto mb-3"
               onClick={() => {
                 paymentRef.current?.showModal();
               }}
