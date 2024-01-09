@@ -34,17 +34,6 @@ export const CartContextProvider = (props: Props) => {
     null
   );
 
-  console.log("cart", cartTotalQty);
-  console.log("amount", cartTotalAmount);
-
-  useEffect(() => {
-    const cartItems: any = localStorage.getItem("ECshopCartItem");
-    const cProducts: CartProductType[] | null = JSON.parse(cartItems);
-
-    setCartProducts(cProducts);
-  }, []);
-
-  // ロジックがよくわからない。カートの合計金額を求める
   useEffect(() => {
     const getTotals = () => {
       if (cartProducts) {
@@ -102,7 +91,6 @@ export const CartContextProvider = (props: Props) => {
     [cartProducts]
   );
 
-  // ロジックがよくわからない
   const handleCartQtyIncrease = useCallback(
     (product: CartProductType) => {
       let updatedCart;

@@ -10,12 +10,6 @@ import { User } from "@prisma/client";
 import { SafeUser } from "@/types";
 import getCurrentUser from "@/actions/getCurrentUser";
 
-// FIXME: ここでasyncを使うとエラーが出る。
-
-// FIXME: awaitを使っている部分。ログインしているユーザーの情報を取得している。
-
-// const [currentUser, setCurrentUser] = useState<SafeUser | null>(null);
-
 const NavBar = async () => {
   const currentUser = await getCurrentUser();
 

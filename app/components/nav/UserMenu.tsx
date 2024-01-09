@@ -37,11 +37,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
               <a href="/orders">Your Orders</a>
             </li>
             <li>
-              <a href="/bookings">Your Bookings</a>
+              <a href="/bookings">Your Beauticians</a>
             </li>
-            <li>
-              <a href="/admin">Admin Dashboard</a>
-            </li>
+
             <hr />
             <li>
               <a
