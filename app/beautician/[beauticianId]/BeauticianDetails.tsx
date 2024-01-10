@@ -4,8 +4,11 @@ import { FaInstagram, FaLastfmSquare } from "react-icons/fa";
 import Container from "@/app/components/Container";
 import Image from "next/image";
 import { truncateText } from "@/utils/truncateText";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFavoriteBeauticians } from "@/hooks/useFavoriteBeauticians";
+import getCurrentUser from "@/actions/getCurrentUser";
+import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 interface Beautician {
   id: string;
@@ -32,6 +35,10 @@ interface BeauticianDetailsProps {
 const ProductDetails: React.FC<BeauticianDetailsProps> = ({ beautician }) => {
   const { favoriteBeauticians, addFavorite, removeFavorite, isFavorite } =
     useFavoriteBeauticians();
+  const { data: session, status } = useSession();
+
+  if (status === "authenticated") {
+  }
 
   return (
     <>
@@ -49,7 +56,7 @@ const ProductDetails: React.FC<BeauticianDetailsProps> = ({ beautician }) => {
           </div>
           <div className="text-2xl font-medium mt-10 text-center md:text-left mb-3">
             {beautician.name}
-            {isFavorite(beautician.id) ? (
+            {isFavorite(beautician.id) && status === "authenticated" ? (
               <div
                 onClick={() => {
                   removeFavorite(beautician.id);
@@ -58,11 +65,20 @@ const ProductDetails: React.FC<BeauticianDetailsProps> = ({ beautician }) => {
               >
                 - Remove from favorite
               </div>
-            ) : (
+            ) : !isFavorite(beautician.id) && status === "authenticated" ? (
               <div
                 className="text-deepTan mt-1 cursor-pointer"
                 onClick={() => {
                   addFavorite(beautician.id);
+                }}
+              >
+                + Add to favorite
+              </div>
+            ) : (
+              <div
+                className="text-deepTan mt-1 cursor-pointer"
+                onClick={() => {
+                  toast.error("Please Log in to add");
                 }}
               >
                 + Add to favorite

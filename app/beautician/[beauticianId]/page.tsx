@@ -13,6 +13,10 @@ const Beautician = ({ params }: { params: IPrams }) => {
     (item) => item.id === params.beauticianId
   );
 
+  if (!beautician) {
+    return <div>Beautician not found</div>;
+  }
+
   return <BeauticianDetails beautician={beautician} />;
 };
 

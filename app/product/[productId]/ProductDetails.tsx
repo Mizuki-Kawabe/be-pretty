@@ -4,6 +4,7 @@ import { useCart } from "@/hooks/useCart";
 import { formatPrice } from "@/utils/formatPrice";
 import { Rating } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import SetQuantity from "../../components/products/setQuantity";
 
@@ -36,6 +37,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   const { handleAddProductToCart, cartProducts } = useCart();
   const [isProductInCart, setIsProductInCart] = useState(false);
   const { cartTotalQty } = useCart();
+  const router = useRouter();
+
   const [cartProduct, setCartProduct] = useState<CartProductType>({
     id: product.id,
     name: product.name,
@@ -117,9 +120,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           <Horizontal />
           {isProductInCart ? (
             <div className="max-w-[300px]">
-              <a href={`/cart`} className="btn w-full text-deepTan btn-outline">
+              <div
+                className="btn w-full text-deepTan btn-outline"
+                onClick={() => router.push("/cart")}
+              >
                 View Cart
-              </a>
+              </div>
             </div>
           ) : (
             <>

@@ -6,8 +6,11 @@ import theme from "./theme";
 import CartProvider from "@/providers/cartProvider";
 import { Toaster } from "react-hot-toast";
 import NavBar from "./components/nav/NavBar";
-import getCurrentUser from "@/actions/getCurrentUser";
+
 import { FavoriteBeauticiansProvider } from "@/hooks/useFavoriteBeauticians";
+
+import { getServerSession } from "next-auth/next";
+import SessionProvider from "./components/provider/SessionProvider";
 
 if (process.env.NODE_ENV === "development") {
   require("../mocks");
@@ -23,35 +26,35 @@ export const metadata: Metadata = {
   description: "E-commerce website",
 };
 
-const currentUser = getCurrentUser();
-console.log("user", currentUser);
-
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getServerSession();
   return (
     <html lang="en">
       <body className={merriweather.className}>
-        <Toaster
-          toastOptions={{
-            style: {
-              background: "rgb(51 65 85)",
-              color: "#fff",
-            },
-          }}
-        />
-        <CartProvider>
-          <FavoriteBeauticiansProvider>
-            {/* @ts-expect-error Server Component */}
-            <NavBar />
-            <div className="flex flex-col min-h-screen bg-offWhite">
-              <main className="flex-grow">{children}</main>
-            </div>
-            <Footer />
-          </FavoriteBeauticiansProvider>
-        </CartProvider>
+        <SessionProvider session={session}>
+          <Toaster
+            toastOptions={{
+              style: {
+                background: "rgb(51 65 85)",
+                color: "#fff",
+              },
+            }}
+          />
+          <CartProvider>
+            <FavoriteBeauticiansProvider>
+              {/* @ts-expect-error Server Component */}
+              <NavBar />
+              <div className="flex flex-col min-h-screen bg-offWhite">
+                <main className="flex-grow">{children}</main>
+              </div>
+              <Footer />
+            </FavoriteBeauticiansProvider>
+          </CartProvider>
+        </SessionProvider>
       </body>
     </html>
   );

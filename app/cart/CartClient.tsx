@@ -9,12 +9,18 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import ItemContent from "./itemContent";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 const CartClient = () => {
   const [isPaymentProcessing, setIsPaymentProcessing] = useState(false);
   const [isPaymentDone, setIsPaymentDone] = useState(false);
   const { cartProducts, handleClearCart, cartTotalAmount } = useCart();
   const paymentRef = useRef<HTMLDialogElement | null>(null);
+  const { data: session, status } = useSession();
+
+  console.log("data", session);
+  console.log("status", status);
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -84,14 +90,25 @@ const CartClient = () => {
             </div>
 
             <div className="flex flex-col w-full">
-              <button
-                className="btn bg-tan text-white border-none w-44 m-auto"
-                onClick={() => {
-                  paymentRef.current?.showModal();
-                }}
-              >
-                Check Out
-              </button>
+              {status === "authenticated" ? (
+                <button
+                  className="btn bg-tan text-white border-none w-44 m-auto"
+                  onClick={() => {
+                    paymentRef.current?.showModal();
+                  }}
+                >
+                  Check Out
+                </button>
+              ) : (
+                <button
+                  className="btn bg-tan text-white border-none w-44 m-auto"
+                  onClick={() => {
+                    toast.error("Log in to purchase");
+                  }}
+                >
+                  Check Out
+                </button>
+              )}
 
               <Link
                 href={"/"}
@@ -136,14 +153,25 @@ const CartClient = () => {
               <span>{formatPrice(cartTotalAmount)}</span>
             </div>
 
-            <button
-              className="btn bg-tan text-white border-none w-44 m-auto mb-3"
-              onClick={() => {
-                paymentRef.current?.showModal();
-              }}
-            >
-              Check Out
-            </button>
+            {status === "authenticated" ? (
+              <button
+                className="btn bg-tan text-white border-none w-44 m-auto"
+                onClick={() => {
+                  paymentRef.current?.showModal();
+                }}
+              >
+                Check Out
+              </button>
+            ) : (
+              <button
+                className="btn bg-tan text-white border-none w-44 m-auto"
+                onClick={() => {
+                  toast.error("Log in to purchase");
+                }}
+              >
+                Check Out
+              </button>
+            )}
 
             <Link
               href={"/"}

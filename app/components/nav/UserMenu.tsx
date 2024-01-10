@@ -15,7 +15,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   // const [isOpen, setIsOpen] = useState(false);
   // const toggleOpen = useCallback(() => {
   //   setIsOpen((prev) => !prev);
-  // }, []);
+  // }, []
 
   return (
     <>
@@ -37,7 +37,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
               <a href="/orders">Your Orders</a>
             </li>
             <li>
-              <a href="/bookings">Your Beauticians</a>
+              <a href="/favorite">Your Beauticians</a>
             </li>
 
             <hr />
