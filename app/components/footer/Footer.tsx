@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../Container";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -27,15 +28,13 @@ const Footer = () => {
                   className="mt-4 space-y-4 text-black font-extralight text-base"
                 >
                   <li>
-                    <a href="/product">Products</a>
+                    <Link href="/product">Products</Link>
                   </li>
-
                   <li>
-                    <a href="/beautician">Beauticians</a>
+                    <Link href="/beautician">Beauticians</Link>
                   </li>
-
                   <li>
-                    <a href="/about"> About </a>
+                    <Link href="/about">About Us</Link>
                   </li>
                 </ul>
               </div>

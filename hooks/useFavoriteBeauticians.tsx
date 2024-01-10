@@ -9,7 +9,7 @@ import React, {
 } from "react";
 
 interface FavoritesBeauticiansContextType {
-  favoriteBeauticians: string[];
+  favoriteBeauticiansId: string[];
   addFavorite: (beauticianId: string) => void;
   removeFavorite: (beauticianId: string) => void;
   isFavorite: (beauticianId: string) => boolean;
@@ -26,7 +26,7 @@ interface FavoriteBeauticiansProviderProps {
 export const FavoriteBeauticiansProvider: React.FC<
   FavoriteBeauticiansProviderProps
 > = ({ children }) => {
-  const [favoriteBeauticians, setFavoriteBeauticians] = useState<string[]>(
+  const [favoriteBeauticiansId, setFavoriteBeauticians] = useState<string[]>(
     () => {
       // Load initial favorites from local storage
       const storedFavorites = localStorage.getItem("favoriteBeauticians");
@@ -49,18 +49,18 @@ export const FavoriteBeauticiansProvider: React.FC<
   useEffect(() => {
     localStorage.setItem(
       "favoriteBeauticians",
-      JSON.stringify(favoriteBeauticians)
+      JSON.stringify(favoriteBeauticiansId)
     );
-    console.log(favoriteBeauticians);
-  }, [favoriteBeauticians]);
+    console.log(favoriteBeauticiansId);
+  }, [favoriteBeauticiansId]);
 
   const isFavorite = (beauticianId: string) => {
-    return favoriteBeauticians.includes(beauticianId);
+    return favoriteBeauticiansId.includes(beauticianId);
   };
 
   return (
     <FavoritesBeauticiansContext.Provider
-      value={{ favoriteBeauticians, addFavorite, removeFavorite, isFavorite }}
+      value={{ favoriteBeauticiansId, addFavorite, removeFavorite, isFavorite }}
     >
       {children}
     </FavoritesBeauticiansContext.Provider>
