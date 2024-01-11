@@ -1,17 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Container from "../Container";
 import UserMenu from "./UserMenu";
 import { MdHome } from "react-icons/md";
-
-import BackDrop from "./BackDrop";
-import CartCount from "./CartCount";
-
-import { User } from "@prisma/client";
-import { SafeUser } from "@/types";
 import getCurrentUser from "@/actions/getCurrentUser";
+import CartCount from "./CartCount";
+import { useSession } from "next-auth/react";
 
-const NavBar = async () => {
-  const currentUser = await getCurrentUser();
+const NavBar = () => {
+  const { data: session, status } = useSession();
 
   return (
     <>
@@ -85,7 +83,7 @@ const NavBar = async () => {
             <div className="navbar-end flex gap-6">
               <CartCount />
 
-              <UserMenu currentUser={currentUser} />
+              <UserMenu />
             </div>
           </div>
         </Container>

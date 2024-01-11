@@ -8,18 +8,21 @@ import BackDrop from "./BackDrop";
 import { MdSettingsInputComponent } from "react-icons/md";
 import { SafeUser } from "@/types";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 interface UserMenuProps {
   currentUser: SafeUser | null;
 }
-const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
+
+const UserMenu = () => {
+  const { data: session, status } = useSession();
   return (
     <>
       <div className="dropdown dropdown-end">
         <div tabIndex={0} role="button" className="text-slate-700 z-30">
           <FaUser className="z-30" />
         </div>
-        {currentUser ? (
+        {status === "authenticated" ? (
           <ul
             tabIndex={0}
             className="dropdown-content  menu p-2 shadow bg-black rounded-box w-52 text-white z-30"
