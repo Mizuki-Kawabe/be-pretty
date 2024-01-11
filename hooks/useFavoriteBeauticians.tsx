@@ -51,7 +51,6 @@ export const FavoriteBeauticiansProvider: React.FC<
       "favoriteBeauticians",
       JSON.stringify(favoriteBeauticiansId)
     );
-    console.log(favoriteBeauticiansId);
   }, [favoriteBeauticiansId]);
 
   const isFavorite = (beauticianId: string) => {

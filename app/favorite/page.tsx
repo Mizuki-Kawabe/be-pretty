@@ -4,9 +4,22 @@ import { useFavoriteBeauticians } from "@/hooks/useFavoriteBeauticians";
 import BeauticianCard from "../components/beauticians/BeauticianCard";
 import Container from "../components/Container";
 import { beauticians } from "@/utils/beauticians";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Favorite = () => {
   const { favoriteBeauticiansId } = useFavoriteBeauticians();
+
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status !== "authenticated") {
+      router.push("/login");
+      router.refresh();
+    }
+  }, []);
 
   const favoriteBeauticiansArray = beauticians.filter((obj) =>
     favoriteBeauticiansId.includes(obj.id)

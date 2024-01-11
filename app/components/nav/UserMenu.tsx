@@ -7,25 +7,16 @@ import { FaUser } from "react-icons/fa";
 import BackDrop from "./BackDrop";
 import { MdSettingsInputComponent } from "react-icons/md";
 import { SafeUser } from "@/types";
+import Link from "next/link";
 
 interface UserMenuProps {
   currentUser: SafeUser | null;
 }
 const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
-  // const [isOpen, setIsOpen] = useState(false);
-  // const toggleOpen = useCallback(() => {
-  //   setIsOpen((prev) => !prev);
-  // }, []
-
   return (
     <>
       <div className="dropdown dropdown-end">
-        <div
-          tabIndex={0}
-          role="button"
-          className="text-slate-700 z-30"
-          // onClick={toggleOpen}
-        >
+        <div tabIndex={0} role="button" className="text-slate-700 z-30">
           <FaUser className="z-30" />
         </div>
         {currentUser ? (
@@ -34,21 +25,21 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             className="dropdown-content  menu p-2 shadow bg-black rounded-box w-52 text-white z-30"
           >
             <li>
-              <a href="/orders">Your Orders</a>
+              <Link href="/order">Your Orders</Link>
             </li>
             <li>
-              <a href="/favorite">Your Beauticians</a>
+              <Link href="/favorite">Your Beauticians</Link>
             </li>
 
             <hr />
             <li>
-              <a
+              <span
                 onClick={() => {
                   signOut();
                 }}
               >
                 LogOut
-              </a>
+              </span>
             </li>
           </ul>
         ) : (
@@ -57,10 +48,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             className="dropdown-content  menu p-2 shadow bg-black rounded-box w-52 text-white z-30"
           >
             <li>
-              <a href="/login">Login</a>
+              <Link href="/login">Login</Link>
             </li>
             <li>
-              <a href="/register">Register</a>
+              <Link href="/register">Register</Link>
             </li>
           </ul>
         )}

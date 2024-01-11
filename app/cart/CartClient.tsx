@@ -3,7 +3,7 @@ import { useCart } from "@/hooks/useCart";
 import { formatPrice } from "@/utils/formatPrice";
 import { dividerClasses } from "@mui/material";
 import Link from "next/link";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { MdArrowBack } from "react-icons/md";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
@@ -11,6 +11,7 @@ import ItemContent from "./itemContent";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
+import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 
 const CartClient = () => {
   const [isPaymentProcessing, setIsPaymentProcessing] = useState(false);
@@ -18,9 +19,6 @@ const CartClient = () => {
   const { cartProducts, handleClearCart, cartTotalAmount } = useCart();
   const paymentRef = useRef<HTMLDialogElement | null>(null);
   const { data: session, status } = useSession();
-
-  console.log("data", session);
-  console.log("status", status);
 
   if (!cartProducts || cartProducts.length === 0) {
     return (
@@ -42,6 +40,25 @@ const CartClient = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsPaymentProcessing(true);
+
+    const currentDate = new Date();
+
+    // 既存の purchaseInfo を取得または初期化
+    const existingPurchaseInfo = JSON.parse(
+      localStorage.getItem("purchaseInfo") || "[]"
+    );
+
+    const newPurchaseInfo = {
+      products: cartProducts,
+      totalAmount: cartTotalAmount,
+      date: currentDate.toISOString(),
+    };
+
+    // 既存の情報に新しい情報を追加
+    existingPurchaseInfo.push(newPurchaseInfo);
+
+    // 更新された purchaseInfo をローカルストレージに保存
+    localStorage.setItem("purchaseInfo", JSON.stringify(existingPurchaseInfo));
 
     setTimeout(() => {
       setIsPaymentProcessing(false);

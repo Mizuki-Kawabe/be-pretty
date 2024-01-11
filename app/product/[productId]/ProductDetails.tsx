@@ -60,7 +60,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         setIsProductInCart(true);
       }
     }
-    console.log(cartProducts);
   }, [cartProducts]);
 
   const productRating =

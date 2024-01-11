@@ -33,7 +33,7 @@ interface BeauticianDetailsProps {
 }
 
 const ProductDetails: React.FC<BeauticianDetailsProps> = ({ beautician }) => {
-  const { favoriteBeauticians, addFavorite, removeFavorite, isFavorite } =
+  const { favoriteBeauticiansId, addFavorite, removeFavorite, isFavorite } =
     useFavoriteBeauticians();
   const { data: session, status } = useSession();
 
