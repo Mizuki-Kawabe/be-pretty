@@ -1,21 +1,18 @@
 export const products = [
   {
     id: "64a654593e91b8e73a351e9b",
-    name: "iphone 14",
-    description: "Short description",
-    price: 2999,
-    brand: "apple",
-    category: "Phone",
+    name: "Opulent Velvet Rose Lipstick",
+    description:
+      "Elevate your lips with the opulent richness of our Velvet Rose Lipstick. Experience luxurious hydration and captivating color that lasts all day.",
+    price: 19,
+    brand: "LuminaGlow",
+    category: "Lipstick",
     inStock: true,
     images: [
       {
-        color: "White",
-        colorCode: "#FFFFFF",
         image: "/product-1.png",
       },
       {
-        color: "Gray",
-        colorCode: "#808080",
         image: "/product-1.png",
       },
     ],
@@ -23,17 +20,15 @@ export const products = [
   },
   {
     id: "64a4ebe300900d44bb50628a",
-    name: "Logitech MX Keys Advanced Wireless Illuminated Keyboard, Tactile Responsive Typing, Backlighting, Bluetooth, USB-C, Apple macOS, Microsoft Windows, Linux, iOS, Android, Metal Build (Black)",
+    name: "Radiant Blossom Blush Palette",
     description:
-      "PERFECT STROKE KEYS - Spherically-dished keys match the shape of your fingertips, offering satisfying feedback with every tap\nCOMFORT AND STABILITY - Type with confidence on a keyboard crafted for comfort, stability, and precision",
-    price: 102.99,
-    brand: "logitech",
-    category: "Accesories",
+      "Illuminate your cheeks with the Radiant Blossom Blush Palette. A harmonious blend of vibrant shades for a radiant complexion, this palette is a must-have for every makeup enthusiast.",
+    price: 28,
+    brand: "BelleVisage",
+    category: "Blush",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-2.png",
       },
     ],
@@ -62,27 +57,21 @@ export const products = [
   },
   {
     id: "648437b38c44d52b9542e340",
-    name: "Apple iPhone 12, 64GB",
+    name: "Enchanting Twilight Eyeshadow Collection",
     description:
-      'The product is refurbished, fully functional, and in excellent condition. Backed by the 90-day E~Shop Renewed Guarantee.\n- This pre-owned product has been professionally inspected, tested and cleaned by Amazon qualified vendors. It is not certified by Apple.\n- This product is in "Excellent condition". The screen and body show no signs of cosmetic damage visible from 12 inches away.\n- This product will have a battery that exceeds 80% capacity relative to new.\n- Accessories may not be original, but will be compatible and fully functional. Product may come in generic box.\n- Product will come with a SIM removal tool, a charger and a charging cable. Headphone and SIM card are not included.\n- This product is eligible for a replacement or refund within 90-day of receipt if it does not work as expected.\n- Refurbished phones are not guaranteed to be waterproof.',
-    price: 40,
-    brand: "Apple",
-    category: "Phone",
+      "Unleash your inner artist with the Enchanting Twilight Eyeshadow Collection. A captivating range of shades for endless eye looks, this collection lets you create magic with every brushstroke.",
+    price: 32,
+    brand: "Elysian",
+    category: "Eyeshadow",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-3.png",
       },
       {
-        color: "Blue",
-        colorCode: " #0000FF",
         image: "/product-3.png",
       },
       {
-        color: "Red",
-        colorCode: "#FF0000",
         image: "/product-3.png",
       },
     ],
@@ -132,17 +121,15 @@ export const products = [
   },
   {
     id: "64a4e9e77e7299078334019f",
-    name: "Logitech MX Master 2S Wireless Mouse – Use on Any Surface, Hyper-Fast Scrolling, Ergonomic Shape, Rechargeable, Control Upto 3 Apple Mac and Windows Computers, Graphite",
+    name: "Ageless Renewal Elixir Serum",
     description:
-      "Cross computer control: Game changing capacity to navigate seamlessly on 3 computers, and copy paste text, images, and files from 1 to the other using Logitech flow\nDual connectivity: Use with upto 3 Windows or Mac computers via included Unifying receiver or Bluetooth Smart wireless technology. Gesture button- Yes",
-    price: 70,
+      "Discover the secret to ageless beauty with our Renewal Elixir Serum. Its potent formula rejuvenates and renews your skin's vitality, leaving you with a youthful and radiant complexion.",
+    price: 51,
     brand: "logitech",
-    category: "Accesories",
+    category: "Serum",
     inStock: true,
     images: [
       {
-        color: "Graphite",
-        colorCode: " #383838",
         image: "/product-4.png",
       },
     ],
@@ -150,22 +137,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f0t497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Luxury Diamond Radiance Serum",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
+      "Indulge in the luxury of our Diamond Radiance Serum. A jewel-inspired formula that illuminates your skin with pure radiance, this serum is your ticket to a truly luxurious skincare experience.",
     price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+    brand: "Opulent Aura Cosmetics",
+    category: "Serum",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-5.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image:
           "https://firebasestorage.googleapis.com/v0/b/ecommerce-shop-cc542.appspot.com/o/products%2F1688041295389-watch-silver.jpg?alt=media&token=7341e7f0-5c29-4f91-a7e3-57e50faafb74",
       },
@@ -174,22 +157,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f0ee497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Eternal Hydration Moisturizing Essence",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Experience eternal hydration with our Moisturizing Essence. A divine elixir that quenches your skins thirst for luminous radiance, this essence is the key to lasting hydration and a dewy glow.",
+    price: 29,
+    brand: "Celestial Chic Beauty",
+    category: "Moisturizing Essence",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-6.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-6.png",
       },
     ],
@@ -197,22 +176,18 @@ export const products = [
   },
   {
     id: "649d775128b1744f0f497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Luxury Diamond Radiance Serum",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Indulge in the luxury of our Diamond Radiance Serum. A jewel-inspired formula that illuminates your skin with pure radiance, this serum is your ticket to a truly luxurious skincare experience.",
+    price: 48,
+    brand: "LuminaGlow",
+    category: "Serum",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-7.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-7.png",
       },
     ],
@@ -220,22 +195,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f4f497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Pure Bliss Lavender Mist",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Embark on a journey of pure bliss with our Lavender Mist. Envelop your senses in calming lavender essence and dewy hydration, and experience tranquility in a bottle.",
+    price: 27,
+    brand: "LuminaGlow",
+    category: "Mist",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-8.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-8.png",
       },
     ],
@@ -243,22 +214,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f0f39g040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Rose Petal Kiss Lip Balm",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Seal your lips with a tender Rose Petal Kiss. Our lip balm, enriched with the essence of rose petals, bestows softness and allure, leaving your lips irresistibly kissable.",
+    price: 19,
+    brand: "Elysian",
+    category: "Lip Balm",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-9.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-9.png",
       },
     ],
@@ -266,22 +233,18 @@ export const products = [
   },
   {
     id: "649d775128b674450f497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Divine Silk Elegance Moisturizing Cream",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Experience divine luxury with our Silk Elegance Moisturizing Cream. Immerse your skin in silk-like hydration and timeless elegance, and embrace the feeling of pure indulgence.",
+    price: 38,
+    brand: "Opulent Aura Cosmetics",
+    category: "Moisturizing Cream",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-10.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-10.png",
       },
     ],
@@ -289,22 +252,18 @@ export const products = [
   },
   {
     id: "649d775128b6734f0f497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Majestic Gaze Waterproof Eyeliner",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Command a majestic gaze with our Waterproof Eyeliner. Its ink-black precision creates eyes that captivate and allure, making a statement wherever you go.",
+    price: 21,
+    brand: "LuminaGlow",
+    category: "Eyeliner",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-11.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-11.png",
       },
     ],
@@ -312,22 +271,18 @@ export const products = [
   },
   {
     id: "649d775128b674440f397040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Ethereal Glow Foundation Elixir",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Unveil an ethereal glow with our Foundation Elixir. A luminous elixir that transforms your complexion into pure radiance, this elixir is the secret to a flawless and ethereal look.",
+    price: 14,
+    brand: "BelleVisage",
+    category: "Foundation",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-12.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-12.png",
       },
     ],
@@ -335,22 +290,18 @@ export const products = [
   },
   {
     id: "649d775124b6744f0f497040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Velvet Noir Intense Volume Mascara",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Dramatize your lashes with the Velvet Noir Intense Volume Mascara. Luxurious volume, intensity, and blackest-black allure make your eyes the center of attention.",
+    price: 15,
+    brand: "BelleVisage",
+    category: "Mascara",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-13.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-13.png",
       },
     ],
@@ -358,22 +309,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f0f4447040",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Mystic Eyes Smudge-Proof Eye Pencil",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Craft mystic eye looks with our Smudge-Proof Eye Pencil. A long-wearing pencil that imparts an aura of enchantment, this pencil ensures your eyes remain captivating all day.",
+    price: 12,
+    brand: "Elysian Elegance",
+    category: "Eyeliner",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-14.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-14.png",
       },
     ],
@@ -381,22 +328,18 @@ export const products = [
   },
   {
     id: "649d775128b6744f0f497050",
-    name: 'Smart Watch(Answer/Make Call), 1.85" Smartwatch for Men Women IP68 Waterproof, 100+ Sport Modes, Fitness Activity Tracker, Heart Rate Sleep Monitor, Pedometer, Smart Watches for Android iOS, 2023',
+    name: "Artisan Masterpiece Makeup Brush Set",
     description:
-      'Bluetooth Call and Message Reminder: The smart watch is equipped with HD speaker, after connecting to your phone via Bluetooth, you can directly use the smartwatches to answer or make calls, read messages, store contacts, view call history. The smartwatch can set up more message notifications in "GloryFit" APP. You will never miss any calls and messages during meetings, workout and riding.',
-    price: 50,
-    brand: "Nerunsa",
-    category: "Watch",
+      "Unleash your inner artist with the Artisans Masterpiece Makeup Brush Set. Handcrafted brushes for crafting masterpiece looks, this set is the epitome of artistry in makeup.",
+    price: 8,
+    brand: "Elysian Elegance",
+    category: "Brush",
     inStock: true,
     images: [
       {
-        color: "Black",
-        colorCode: "#000000",
         image: "/product-15.png",
       },
       {
-        color: "Silver",
-        colorCode: "#C0C0C0",
         image: "/product-15.png",
       },
     ],
