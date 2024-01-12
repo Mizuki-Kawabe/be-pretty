@@ -4,9 +4,7 @@ import { FaInstagram, FaLastfmSquare } from "react-icons/fa";
 import Container from "@/app/components/Container";
 import Image from "next/image";
 import { truncateText } from "@/utils/truncateText";
-import { useEffect, useState } from "react";
 import { useFavoriteBeauticians } from "@/hooks/useFavoriteBeauticians";
-import getCurrentUser from "@/actions/getCurrentUser";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
 
@@ -36,9 +34,6 @@ const ProductDetails: React.FC<BeauticianDetailsProps> = ({ beautician }) => {
   const { favoriteBeauticiansId, addFavorite, removeFavorite, isFavorite } =
     useFavoriteBeauticians();
   const { data: session, status } = useSession();
-
-  if (status === "authenticated") {
-  }
 
   return (
     <>
