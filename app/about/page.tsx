@@ -1,13 +1,7 @@
-/* eslint-disable react/no-children-prop */
 import Image from "next/image";
 import Container from "../components/Container";
 
-interface AboutProps {
-  children: React.ReactNode;
-}
-
-//why do I use AboutProps here?
-const About: React.FC<AboutProps> = () => {
+const About = () => {
   return (
     <>
       <div className="bg-tan w-full h-52 flex items-center">
