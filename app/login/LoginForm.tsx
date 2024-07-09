@@ -94,7 +94,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ currentUser }) => {
       </button>
       <p className="text-sm">
         Do not have an account?
-        <Link href="/login" className="underline ml-1">
+        <Link href="/register" className="underline ml-1">
           Register
         </Link>
       </p>
